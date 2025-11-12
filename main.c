@@ -3,7 +3,7 @@
 
 int main(){
 
-    paralel();
+    seri();
     
     return 0;
 }

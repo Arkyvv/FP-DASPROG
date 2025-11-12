@@ -2,5 +2,6 @@
 #define KALKULATOR_H
 
 void paralel();
+void seri();
 
 #endif
