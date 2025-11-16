@@ -18,7 +18,6 @@ char ask(){
 
     return ans;
 }
-
 int rerun(char dec) {
     if(dec == 'Y'){
         system("clear");
@@ -64,16 +63,23 @@ void mulai(){
     if(opt == 3 ){
         printf("\n");
         seri();
-        dec = ask();
-        if(rerun(dec)){
-            return;
+        getchar();
+        printf("---TEKAN ENTER UNTUK KEMBALI KE MENU UTAMA---");
+        dec = getchar();
+        if(dec == '\n') {
+            system("clear");
+            mulai();
         }
+        
     }else if(opt == 4 ){
         printf("\n");
         paralel();
-        dec = ask();
-        if(rerun(dec)){
-            return;
+        getchar();
+        printf("---TEKAN ENTER UNTUK KEMBALI KE MENU UTAMA---");
+        dec = getchar();
+        if(dec == '\n') {
+            system("clear");
+            mulai();
         }
     }
 
