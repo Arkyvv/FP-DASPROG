@@ -30,8 +30,10 @@ int rerun(char dec) {
     }
 }
 void mulai(){
-    int opt;
+    int opt = 1;
     char dec;
+    
+    do{
     for(int i = 0; i < 50; i ++){
         printf("="); 
     }
@@ -45,23 +47,29 @@ void mulai(){
     printf("|   3. SEIRES RESISTORS                          |\n");
     printf("|   4. PARALEL RESISTORS                         |\n\n");
 
-    do{
+    if(opt > 9 || opt < 1 ) {
+        printf("\n");
+        printf("Input according to the options provided!!!\n");
+    }
+
     printf("Choose Calculator : ");
     scanf(" %d", &opt);
-    if(opt > 9 && opt < 1 ) {
-        printf("\n");
-        printf("Input according to the options provided!!!");
+    if(opt > 9 || opt < 1 ){
+        system("clear");
     }
+    
     } 
-    while(opt > 9 && opt < 1 );
+    while(opt > 9 || opt < 1 );
 
     if(opt == 3 ){
+        printf("\n");
         seri();
         dec = ask();
         if(rerun(dec)){
             return;
         }
     }else if(opt == 4 ){
+        printf("\n");
         paralel();
         dec = ask();
         if(rerun(dec)){
