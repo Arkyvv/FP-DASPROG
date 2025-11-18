@@ -2,11 +2,9 @@
 #include <stdlib.h>
 #include "kalkulator.h"
 
-void mulai(){
-    int opt = 1;
+void mulai(int opt){
     char dec;
     
-    do{
     for(int i = 0; i < 50; i ++){
         printf("="); 
     }
@@ -27,40 +25,36 @@ void mulai(){
 
     printf("Choose an Option : ");
     scanf(" %d", &opt);
-    if(opt > 9 || opt < 1 ){
-        system("clear");
-    }
-    
-    } 
-    while(opt > 9 || opt < 1 );
 
-    if(opt == 3 ){
-        printf("\n");
-        seri();
-        getchar();
-        printf("---TEKAN ENTER UNTUK KEMBALI KE MENU UTAMA---");
-        dec = getchar();
-        if(dec == '\n') {
+    switch(opt){
+        case 3 :
+            printf("\n");
+            seri();
+
+            break;
+        case 4:
+            printf("\n");
+            paralel();
+
+            break;
+
+        default :
             system("clear");
-            mulai();
-        }
-        
-    }else if(opt == 4 ){
-        printf("\n");
-        paralel();
-        getchar();
-        printf("---TEKAN ENTER UNTUK KEMBALI KE MENU UTAMA---");
-        dec = getchar();
-        if(dec == '\n') {
-            system("clear");
-            mulai();
-        }
+            mulai(opt);
+    }
+
+    getchar();
+    printf("---TEKAN ENTER UNTUK KEMBALI KE MENU UTAMA---");
+    dec = getchar();
+    if(dec == '\n') {
+        system("clear");
+        mulai(1);
     }
 
 }
 int main(){
 
-    mulai();
+    mulai(1);
     
     return 0;
 }

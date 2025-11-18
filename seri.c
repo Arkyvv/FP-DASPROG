@@ -13,7 +13,7 @@ void seri(){
 
     for(int i = 1; i <= num; i++){
         
-        printf("Besar hambatan %d: ", i);
+        printf("Resistor Magnitude %d (ohm): ", i);
         scanf("%f", &res[i-1]);
 
     }
