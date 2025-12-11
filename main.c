@@ -43,9 +43,13 @@ void mulai(int opt){
 
     switch(opt){
         case 1:
+            printf("\n");
+            hukum_ohm();
 
             break;
         case 2:
+            printf("\n");
+            daya();
 
             break;
         case 3 :
@@ -59,6 +63,7 @@ void mulai(int opt){
 
             break;
         case 5:
+            printf("\n");
             decimal();
 
             break;
