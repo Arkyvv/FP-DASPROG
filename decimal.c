@@ -2,20 +2,28 @@
 #include <math.h>
 #include "kalkulator.h"
 
-int digit_oktal(float num) {
-    int result;
-    for(int i = 5; i >= 0 ; i--){
-        if(num >=  pow(8,i)) {
-            result = 1 + i;
-            break;
-
-        }
-    }
+long long int digit_biner(double num){
+    int result = 0;
+    long long int temp = num;
+    do{
+        temp /= 2;
+        ++result;
+    }while(temp != 0);
     return result;
 }
-int digit_heksa(float num){
+
+long long int digit_oktal(double num) {
     int result = 0;
-    int temp = num;
+    long long int temp = num;
+    do{
+        temp /= 8;
+        ++result;
+    }while(temp != 0);
+    return result;
+}
+long long int digit_heksa(double num){
+    int result = 0;
+    long long int temp = num;
     do{
         temp /= 16;
         ++result;
@@ -25,38 +33,31 @@ int digit_heksa(float num){
 }
 
 void decimal() {
-    float num;
+    double num;
     
     printf("Masukkan Bilangan desimal : ");
-    scanf(" %f", &num);
+    scanf(" %lf", &num);
 
     //Konversi ke Biner
+    long long int digit = digit_biner(num);
+    long long int biner[digit];
+    long long int temp1 = num;
 
-    int bit;
-    if(num > 255) {
-        bit = 16;
-    }else {
-        bit = 8;
-    }
-
-    int temp1 = num;
-    int biner[bit];
-
-    for(int i = 0; i < bit; i++){
+    for(int i = 0; i < digit; i++){
         biner[i] = 0;
     }
 
-    for(int i = bit-1; i >= 0; i-- ){
+    for(int i = digit-1; i >= 0; i-- ){
         biner[i] = temp1 % 2;
         temp1 /= 2;
         if(temp1 == 0){
             break;
         }
     }
-    
+
     printf("-Biner        : ");
-    for(int i = 0; i < bit; i++){
-        printf("%d", biner[i]);
+    for(int i = 0; i < digit; i++){
+        printf("%lld", biner[i]);
     }
     printf("\n");
 
@@ -64,8 +65,8 @@ void decimal() {
 
     temp1 = num;
 
-    int digit = digit_oktal(num);
-    int oktal[digit];
+    digit = digit_oktal(num);
+    long long int oktal[digit];
 
     for(int i = 1; i <= digit; i++ ){
         oktal[digit-i] = temp1 % 8;
@@ -74,7 +75,7 @@ void decimal() {
 
     printf("-Oktal        : ");
     for(int i = 0; i < digit; i++){
-        printf("%d", oktal[i]);
+        printf("%lld", oktal[i]);
     }
     printf("\n");
 
@@ -82,7 +83,7 @@ void decimal() {
 
     temp1 = num;
     digit = digit_heksa(num);
-    int heksa[digit];
+    long long int heksa[digit];
 
     for(int i = digit-1; i >= 0; i--){
         heksa[i] = temp1 % 16;
@@ -113,7 +114,7 @@ void decimal() {
             default:
                 break;
         }
-        printf("%d", heksa[i]);
+        printf("%lld", heksa[i]);
     }
     printf("\n");
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
