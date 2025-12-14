@@ -8,5 +8,6 @@ void hukum_ohm();
 void daya();
 void oktal();
 void biner();
+void heksadesimal();
 
 #endif
