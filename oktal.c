@@ -4,7 +4,7 @@
 
 int hitung_digit(long long int num) {
     long long int temp = num;
-    int digit;
+    int digit = 0;
     do{
         temp /= 10;
         ++digit;
