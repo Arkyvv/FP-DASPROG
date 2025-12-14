@@ -7,5 +7,6 @@ void decimal();
 void hukum_ohm();
 void daya();
 void oktal();
+void biner();
 
 #endif
