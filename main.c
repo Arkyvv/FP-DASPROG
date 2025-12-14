@@ -71,7 +71,8 @@ void mulai(int opt){
 
             break;
         case 7:
-
+            printf("\n");
+            oktal();
             break;
         case 8:
 
