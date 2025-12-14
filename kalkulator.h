@@ -6,6 +6,6 @@ void seri();
 void decimal();
 void hukum_ohm();
 void daya();
+void oktal();
 
-int digit();
 #endif
