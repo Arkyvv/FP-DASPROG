@@ -68,14 +68,16 @@ void mulai(int opt){
 
             break;
         case 6:
-
+            printf("\n");
+            biner();
             break;
         case 7:
             printf("\n");
             oktal();
             break;
         case 8:
-
+            printf("\n");
+            heksadesimal();
             break;
         case 9:
             exit(0);

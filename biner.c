@@ -2,7 +2,7 @@
 #include "kalkulator.h"
 #include <math.h>
 
-int hitung_digit(long long int num) {
+int hitung_digit_biner(long long int num) {
     long long int temp = num;
     int digit;
     do{
@@ -19,7 +19,7 @@ void biner(){
     scanf("%lld", &num);
     printf("\n");
 
-    int digit = hitung_digit(num);
+    int digit = hitung_digit_biner(num);
     long long int temp = num;
     long long int result;
 
