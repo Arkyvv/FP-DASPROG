@@ -15,7 +15,6 @@ void daya() {
     int pilihan = 0; 
     float V, I, R, P;
 
-    while (pilihan != 4) {
 
         garis();
         printf("|        KALKULATOR DAYA LISTRIK           |\n");
@@ -33,9 +32,8 @@ void daya() {
         printf("| 1. Hitung dari V dan I                   |\n");
         printf("| 2. Hitung dari I dan R                   |\n");
         printf("| 3. Hitung dari V dan R                   |\n");
-        printf("| 4. Keluar                                |\n");
         garis();
-        printf("| Pilih (1-4): ");
+        printf("| Pilih (1-3): ");
         scanf("%d", &pilihan);
         garis();
 
@@ -63,11 +61,7 @@ void daya() {
             P = (V * V) / R;
             printf(" Daya (P) = %.2f Watt\n", P);
         }
-        else if (pilihan == 4) {
-            printf("Keluar program...\n");
-        }
         else {
             printf(" Pilihan tidak valid! Masukkan angka 1-4.\n");
         }
-    }
 }

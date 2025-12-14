@@ -13,7 +13,6 @@ void hukum_ohm() {
     int pilihan = 0; 
     float V, I, R;
 
-    while (pilihan != 4) {
 
         garis();
         printf("|               KALKULATOR OHM             |\n");
@@ -29,9 +28,8 @@ void hukum_ohm() {
         printf("| 1. Cari Tegangan (V = I x R)             |\n");
         printf("| 2. Cari Arus     (I = V / R)             |\n");
         printf("| 3. Cari Hambatan (R = V / I)             |\n");
-        printf("| 4. Kembali ke menu utama                 |\n");
         garis();
-        printf("Pilih (1-4): ");
+        printf("Pilih (1-3): ");
         scanf("%d", &pilihan);
         garis();
 
@@ -69,5 +67,4 @@ void hukum_ohm() {
         else {
             printf("Pilihan tidak valid! Masukkan 1-4.\n\n");
         }
-    }
 }
