@@ -83,5 +83,5 @@ Program ini dibuat untuk:
 1. Pastikan compiler C (misalnya `gcc`) sudah terpasang
 2. Kompilasi seluruh file sumber:
    ```bash
-   gcc *.c -o toolkit -lm
+   gcc *.c -o program -lm
 
