@@ -15,7 +15,7 @@ int hitung_digit_heksadesimal(char c[]) {
 
 void heksadesimal(){
     char num[50];
-    printf("Masukkan bilangan (heksadesimal) :");
+    printf("Masukkan bilangan (heksadesimal) : ");
     scanf("%s", num);
 
     int digit = hitung_digit_heksadesimal(num);
@@ -48,5 +48,5 @@ void heksadesimal(){
         result += bil*pow(16,j);
         
     }
-    printf("Hasil Konversi (desimal) %d\n\n:",result);
+    printf("Hasil Konversi (desimal) : %d\n\n:",result);
 }
