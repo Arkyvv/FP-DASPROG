@@ -4,7 +4,6 @@
 #include "kalkulator.h"
 
 void mulai(int opt){
-    char dec;
     
     for(int i = 0; i < 50; i ++){
         printf("="); 

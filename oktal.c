@@ -14,7 +14,7 @@ int hitung_digit_oktal(long long int num) {
 }
 
 void oktal(){
-    long long int num;
+    long long int num = 0;
     printf("Masukkan bilangan (oktal) : ");
     scanf("%lld", &num);
     printf("\n");

@@ -33,7 +33,7 @@ long long int digit_heksa(double num){
 }
 
 void decimal() {
-    double num;
+    double num = 0;
     
     printf("Masukkan Bilangan desimal : ");
     scanf(" %lf", &num);

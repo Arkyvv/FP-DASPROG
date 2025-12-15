@@ -3,8 +3,8 @@
 
 void seri(){
 
-    int num;
-    float result;
+    int num = 0;
+    float result = 0;
 
     printf("Jumlah resistor : ");
     scanf("%d", &num);
@@ -22,6 +22,7 @@ void seri(){
         result += res[i];
     }
 
-    printf("Resistor Equivalent : %.3f\n", result);
+    printf("\n");
+    printf("Resistor Equivalent : %.3f ohm\n ", result);
     printf("\n");
 }

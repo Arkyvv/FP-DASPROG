@@ -4,7 +4,7 @@
 
 int hitung_digit_biner(long long int num) {
     long long int temp = num;
-    int digit;
+    int digit = 0;
     do{
         temp /= 10;
         ++digit;
@@ -14,7 +14,7 @@ int hitung_digit_biner(long long int num) {
 }
 
 void biner(){
-    long long int num;
+    long long int num = 0;
     printf("Masukkan bilangan (biner) : ");
     scanf("%lld", &num);
     printf("\n");

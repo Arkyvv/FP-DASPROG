@@ -2,7 +2,7 @@
 #include "kalkulator.h"
 
 void paralel(){
-    int num;
+    int num = 0;
     float temp_result = 0;
     float result = 0;
 
@@ -27,6 +27,7 @@ void paralel(){
 
     result = 1/temp_result;
 
+    printf("\n");
     printf("Resistor Equivalent : %.3f ohm\n", result);
     printf("\n");
 
